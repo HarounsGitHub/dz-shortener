@@ -1,4 +1,6 @@
 import { useNavigate } from 'react-router-dom'
+import { ROUTES_NAMES } from '../constants'
+
 //props or deconstructed {toSignup}
 const Sign = ({ signup }) => {
     const navigate = useNavigate()
@@ -18,7 +20,8 @@ const Sign = ({ signup }) => {
                         signup()
                     }}>Sign up</button>
                     <a className="bottom" onClick={() => {
-                        navigate('/login')
+                        {/*hard coded path:   navigate('/login')*/ }
+                        navigate(ROUTES_NAMES.login)
                     }} >Already have an account, go to login</a>
                     {/* onClick={() => setModal(true)} */}
                 </div>

@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { useNavigate, Link } from "react-router-dom"
+import { ROUTES_NAMES } from "../constants"
 
 const Login = (toLogin, toSignup) => {
     const navigate = useNavigate()
@@ -13,7 +14,7 @@ const Login = (toLogin, toSignup) => {
                     <button type={'button'} onClick={() => {
                         toLogin()
                     }}>Login</button>
-                    <Link className="bottom" to="/sign" type={'button'} >
+                    <Link className="bottom" to={ROUTES_NAMES.signup} type={'button'} >
                         You don't have an account?, Signup right now!</Link>
                 </div>
             </form >

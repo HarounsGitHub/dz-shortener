@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import './App.css'
-import Login from './Components/Login'
+import LoginConponet from './Components/Login'
 import Sign from './Components/Sign'
 import { Route, Routes, Navigate, useNavigate } from "react-router-dom"
+import { ROUTES_NAMES } from './constants'
+
 
 function App() {
   const navigate = useNavigate()
@@ -14,11 +16,15 @@ function App() {
   }
   return (
     <Routes>
-      <Route path='/' element={<Navigate to="/login" />} />
-      <Route path='/login' element={
-        <Login className="login" />
+      <Route path={ROUTES_NAMES.home} element={<Navigate to={ROUTES_NAMES.login} />} />
+      {/*before the use of constants.js we used hard coded paths */}
+      {/* <Route path='/login' element={
+        <LoginConponet className="login" />
+      } /> */}
+      <Route path={ROUTES_NAMES.login} element={
+        <LoginConponet className="login" />
       } />
-      <Route path="/sign" element={<Sign className="sign" />} />
+      <Route path={ROUTES_NAMES.signup} element={<Sign className="sign" />} />
 
 
       {/* <div className="App">

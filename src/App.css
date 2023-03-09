@@ -28,6 +28,7 @@ form h2 {
     flex-direction: column;
     width: 100%;
     max-width: 600px;
+    min-width: 542px;
     /* margin: auto; */
     margin: 0 2em 0 2em;
     gap: 5px;
@@ -38,6 +39,7 @@ form {
     border: black solid 1px;
     margin: auto;
     background-color: rgb(224, 224, 224);
+    padding: 20px;
 
 }
 
