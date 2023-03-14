@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 import { ROUTES_NAMES } from '../constants'
 
+
 //props or deconstructed {toSignup}
 const Sign = ({ signup }) => {
     const navigate = useNavigate()

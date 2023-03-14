@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import './App.css'
-import LoginConponet from './Components/Login'
-import Sign from './Components/Sign'
+import LoginConponet from './views/Login'
+import Sign from './views/Sign'
+import Profile from './views/Profile'
 import { Route, Routes, Navigate, useNavigate } from "react-router-dom"
 import { ROUTES_NAMES } from './constants'
 
@@ -25,6 +26,7 @@ function App() {
         <LoginConponet className="login" />
       } />
       <Route path={ROUTES_NAMES.signup} element={<Sign className="sign" />} />
+      <Route path="/profile" element={<Profile />} />
 
 
       {/* <div className="App">
